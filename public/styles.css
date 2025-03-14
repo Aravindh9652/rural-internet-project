@@ -1,0 +1,178 @@
+/* 🌍 General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #F56B00, #FDB813);
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* 🌑 Dark Mode */
+.dark-mode {
+  background: linear-gradient(135deg, #222, #444);
+  color: white;
+}
+
+/* 📦 Container */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 1s forwards;
+}
+
+.dark-mode .container {
+  background: #333;
+  color: white;
+}
+
+/* 🌟 Fade-in Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🎨 Buttons */
+button {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin: 12px 0;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #138496;
+  transform: scale(1.05);
+}
+
+/* 🌑 Dark Mode Buttons */
+.dark-mode button {
+  background-color: #6c757d;
+}
+
+.dark-mode button:hover {
+  background-color: #5a6268;
+}
+
+/* ❓ Help Button */
+#help-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 💡 Help Popup */
+#help-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#help-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 🔘 Dark Mode Toggle */
+.toggle-container {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark-mode .toggle-container {
+  color: white;
+}
+
+/* 🌙 Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #1db954;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+/* 📱 Mobile Optimization */
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+}
