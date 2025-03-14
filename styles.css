@@ -1,0 +1,124 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+h1, h2 {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-container input {
+  width: 70%;
+}
+
+.password-container button {
+  margin-left: 5px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+#hubs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+.dark-mode .container {
+  background: #333;
+  color: white;
+}
+
+.dark-mode button {
+  background-color: #1db954;
+}
+
+.dark-mode button:hover {
+  background-color: #17a34a;
+}
+
+.dark-mode #help-popup {
+  background: #444;
+  color: white;
+}
+
+/* Fix Help Text Visibility */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode p, 
+.dark-mode #help-text {
+  color: white !important;
+}
+
+/* Ensure Help Popup is Below */
+#help-popup {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.dark-mode #help-popup {
+  background: #444;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Free Internet</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <button id="dark-mode-toggle">🌙</button>
+
+    <div class="container">
+        <h1>🌍 Connect to Free Rural Internet</h1>
+
+        <div id="account-screen" class="screen">
+            <h2>Create an Account</h2>
+            <input type="text" id="new-username" placeholder="Choose a username">
+            <div class="password-container">
+                <input type="password" id="new-password" placeholder="Choose a password">
+                <button id="toggle-new-password">👁️</button>
+            </div>
+            <button onclick="createAccount()">Create Account</button>
+            <button onclick="showLogin()">Go to Login</button>
+        </div>
+
+        <div id="login-screen" class="screen hidden">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter your username">
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Enter your password">
+                <button id="toggle-password">👁️</button>
+            </div>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="hub-selection" class="screen hidden">
+            <h2>Select a Local Hub</h2>
+            <div id="hubs"></div>
+        </div>
+
+        <div id="success-message" class="screen hidden">
+            <h2>✅ Successfully Connected to Rural Free Internet!</h2>
+            <p><strong>Network Speed:</strong> <span id="network-speed"></span></p>
+            <p><strong>Bandwidth:</strong> <span id="bandwidth"></span></p>
+            <button onclick="refreshSpeed()">Refresh Speed</button>
+        </div>
+    </div>
+
+    <button id="help-btn">❓</button>
+    
+    <!-- Modified Help Popup Position (Moved Below) -->
+    <div id="help-popup" class="hidden">
+        <p id="help-text">🔹 Create an account if first time.<br>🔹 Login with your credentials.<br>🔹 Select a local hub to connect.<br>🔹 Enjoy free rural internet! 🌍</p>
+        <button id="close-help-btn">Close</button>
+    </div>
+</body>
+</html>
