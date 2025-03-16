@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <button onclick='connectToInternet()'>🏫 School Hub</button>
             <button onclick='connectToInternet()'>🏥 Hospital Hub</button>
             <button onclick='connectToInternet()'>📚 Library Hub</button>
+            <button onclick='connectToInternet()'>🌳 Park Hub</button>
             <button onclick='connectToInternet()'>🏪 Market Hub</button>
         `;
     };
